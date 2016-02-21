@@ -3,18 +3,18 @@ import setuptools
 setuptools.setup(
     name="dbconfig",
     version="0.1.0",
-    url="https://github.com/borntyping/cookiecutter-pypackage-minimal",
+    url="https://github.com/artemishealth/prometheus/tree/master/rv816/GapsInCare/Pycode/Scripts/Modules/dbconfig",
 
     author="Ryan Vass",
     author_email="rvsax16@gmail.com",
 
-    description="Pip installable dbconfig",
+    description="Pip installable SQLAlchemy-style config",
     long_description=open('README.rst').read(),
 
     packages=setuptools.find_packages(),
 
     install_requires=[
-        'dataset'],
+           'dataset'],
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
