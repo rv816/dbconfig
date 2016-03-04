@@ -7,8 +7,8 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 class Configurator:
-    def __init__(self, dbname, script_dir=script_dir):
-        self.jsonpath = str(script_dir) + '/config.json' 
+    def __init__(self, dbname, script_dir=script_dir, profile='artemisdev'):
+        self.jsonpath = str(script_dir) + '/config_{profile}.json'.format(profile=profile) 
         self.dbname = dbname
 
         with open(self.jsonpath) as config:
