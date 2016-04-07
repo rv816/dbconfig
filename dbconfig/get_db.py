@@ -1,8 +1,15 @@
 import dataset
 import json
 import os
-script_dir = os.path.dirname(os.path.abspath(__file__))
+# script_dir = os.path.dirname(os.path.abspath(__file__))
 
+
+try:
+    os.mkdir(os.environ.get('HOME') + '/.dbconfig')
+except FileExistsError:
+    pass
+
+script_dir = os.environ.get('HOME') + '.dbconfig'
 
 
 
