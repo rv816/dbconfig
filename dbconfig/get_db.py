@@ -19,9 +19,13 @@ class Configurator:
             self.password = self.CONFIG['password']
             self.host = self.CONFIG['host']
             self.port = self.CONFIG['port']
+            if self.module:
+                self._plus = '+'
+            else:
+                self._plus = ''
             if self.dbname != '':
                 self.dbname = '/' + self.dbname
-            self.url ='{dbms}+{module}://{user}:{password}@{host}:{port}{dbname}'.format(dbms=self.dbms,module=self.module, user=self.user, password=self.password, host=self.host, port=self.port, dbname=self.dbname)
+            self.url ='{dbms}{plus}{module}://{user}:{password}@{host}:{port}{dbname}'.format(dbms=self.dbms,module=self.module, plus = self._plus, user=self.user, password=self.password, host=self.host, port=self.port, dbname=self.dbname)
     
     
     
